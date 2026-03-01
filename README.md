@@ -16,8 +16,11 @@ Data: Spotify Million Dataset
 ### How is it different from standard recommendation systems
 1) *Using LSTM*: LSTM helps in capturing the "current mood" of the user. As a user listens to a sequence of songs, the LSTM maintains an internal Hidden State.
 2) *Updated Song rating function*: In generic collaborative filtering systems, a user vector u is generated and to get the likelihood of the user liking that song, dot product or cosine similarity of these two vectors are calculated, more the score, more the likelihood of the user liking that song. In this system, a neural network will be maintained for each user and as neural network is just a fancy and complex math function, the neural network will predict the likelihood of the song being liked by the user
+   
 
 ### Pending updates
 1) When deployed for large scale applications, it may get difficult to store neural network file for each user, so to **reduce the memory consumption**, we will prune and quantize the neural network, this will reduce the memory consumption by upto 20-30%
 
 2) **Adding song context window**: To recommend new songs, the next version will give more importance to the the songs that have been heard recently. The plan is to create windows and add positional embedding (most probably RoPE) to recommend new songs
+
+3) Adding more features like genre, danceability, time etc to make better recommendations for the user
