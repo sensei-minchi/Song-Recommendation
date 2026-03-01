@@ -24,3 +24,6 @@ Data: Spotify Million Dataset
 2) **Adding song context window**: To recommend new songs, the next version will give more importance to the the songs that have been heard recently. The plan is to create windows and add positional embedding (most probably RoPE) to recommend new songs
 
 3) Adding more features like genre, danceability, time etc to make better recommendations for the user
+
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/d633fee5-d430-42f1-96cc-9e00da898328" />
