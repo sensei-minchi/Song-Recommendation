@@ -11,7 +11,7 @@ def format_sequences(user_history_embeddings, user_history_rating, window_size=1
         window = user_history_embeddings[i : i + window_size]
         window_rating = user_history_rating[i : i + window_size]
         X.append(window)
-        y.append(window_rating)  # Use the last rating in the window as target
+        y.append(user_history_rating[i + window_size])  # Use the last rating in the window as target
         
     return np.array(X), np.array(y)
 
@@ -55,5 +55,5 @@ if __name__ == "__main__":
     y = labels
 
     user = train(x, y, epochs=5)
-    user.save("user_model.keras")
+    user.save("user_model_temporal.keras")
 
